@@ -6,6 +6,8 @@ Rails.application.routes.draw do
     resources :comments, only: [:create, :destroy]
   end
 
+  resources :users, only: [:show, :edit, :update]
+
   root "restaurants#index"
 
   resources :categories, only: :show

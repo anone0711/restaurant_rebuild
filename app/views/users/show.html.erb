@@ -2,14 +2,14 @@
   <div class="row">
     <div class="col-md-3">
       <% if @user.avatar? %>
-        <%= image_tag @user.avatar, class: "img-responsive center-block" %>
+        <%= image_tag @user.avatar.url, class: "img-responsive center-block" %>
       <% end %>
     </div>
     <div class="col-md-9">
       <h1><%= @user.name %></h1>
       <p><strong><%= @user.email %></strong></p>
       <p><%= @user.intro %></p>
-      <%= link_to "Edit Profile", edit_user_path(@user) %>
+      <%= link_to "Edit Profile", edit_user_path(@user), class: "btn btn-primary" %>
     </div>
   </div>
 </div>

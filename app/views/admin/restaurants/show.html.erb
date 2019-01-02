@@ -8,7 +8,7 @@
     </div>
     <div  class="col-md-12">
     <div class="col-md-4">
-      <%= image_tag @restaurant.image, class: "img-responsive center-block" if @restaurant.image.url %>
+      <%= image_tag @restaurant.image.url, class: "img-responsive center-block" if @restaurant.image.url %>
       <br>
       <div class="well">
         <ul class="list-unstyled">

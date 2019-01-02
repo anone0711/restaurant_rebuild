@@ -5,7 +5,7 @@
       <p>[<%= @restaurant.category.name %>]</p>
     </div>
     <div class="col-md-4">
-      <%= image_tag @restaurant.image, class: "img-responsive center-block" if @restaurant.image.url %>
+      <%= image_tag @restaurant.image.url, class: "img-responsive center-block" if @restaurant.image.url %>
       <br>
       <div class="well">
         <ul class="list-unstyled">
@@ -29,7 +29,7 @@
   <div class="row">
     <% @comments.each do |comment| %>
     <div>
-      <h4><%= comment.user.email.split("@").first %></h4>
+      <h4><%= comment.user.name %></h4>
       <p><%= simple_format comment.content %></p>
       <p class="text-muted">
         <em><%= "about " + time_ago_in_words(comment.created_at) + " ago" %></em>
